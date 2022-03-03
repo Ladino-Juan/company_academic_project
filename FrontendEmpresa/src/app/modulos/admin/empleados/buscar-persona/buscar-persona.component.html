@@ -1,0 +1,44 @@
+<a routerLink="/admin/crear-empleado" class="btn">Nuevo empleado</a>
+
+<table class="table responsive">
+    <thead>
+        <tr>
+        <th>
+            Nombre
+        </th>
+        <th>
+            Apellidos
+        </th>
+        <th>
+            Telefono
+        </th>
+        <th>
+            Correo
+        </th>
+        <th>
+            editar
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of listadoRegistros">
+            <td>
+                {{p.nombre}}
+</td>
+            <td>
+                {{p.apellido}}
+            </td>
+            <td>
+                {{p.telefono}}
+            </td>
+            <td>
+                {{p.email}}
+            </td>
+            <td>
+                <a routerLink="/admin/editar-empleado/{{p.id}}" class="btn">Editar Persona</a>
+            </td>
+
+
+        </tr>
+    </tbody>
+</table>
